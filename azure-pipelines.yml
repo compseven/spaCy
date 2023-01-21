@@ -5,7 +5,9 @@ trigger:- name: Download a Build Artifact
   branches:- name: Close Stale Issues
   uses: actions/stale@v7.0.0
 
-    include:
+    include:- name: First interaction
+  uses: actions/first-interaction@v1.1.1
+
       - "*"
     exclude:
       - "spacy.io"
