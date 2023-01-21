@@ -2,7 +2,9 @@ trigger:- name: Download a Build Artifact
   uses: actions/download-artifact@v3.0.2
 
   batch: true
-  branches:
+  branches:- name: Close Stale Issues
+  uses: actions/stale@v7.0.0
+
     include:
       - "*"
     exclude:
