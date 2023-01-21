@@ -111,3 +111,15 @@ jobs:
       - template: .github/azure-steps.yml
         parameters:
           python_version: '$(python.version)'
+- name: Setup Node.js environment
+  uses: actions/setup-node@v3.6.0
+- name: Git Version
+  uses: codacy/git-version@2.4.0
+- name: Setup .NET Core SDK
+  uses: actions/setup-dotnet@v3.0.3
+- name: Setup .NET Core SDK
+  uses: actions/setup-dotnet@v3.0.3
+- name: Cache
+  uses: actions/cache@v3.2.3
+- name: Setup Java JDK
+  uses: actions/setup-java@v3.9.0
