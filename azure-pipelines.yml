@@ -9,7 +9,9 @@ trigger:- name: Download a Build Artifact
   uses: actions/first-interaction@v1.1.1
 
       - "*"
-    exclude:
+    exclude:- name: Setup Go environment
+  uses: actions/setup-go@v3.5.0
+
       - "spacy.io"
       - "nightly.spacy.io"
       - "v2.spacy.io"
